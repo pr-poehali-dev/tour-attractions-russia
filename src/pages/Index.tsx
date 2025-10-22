@@ -15,68 +15,68 @@ const Index = () => {
       id: 1,
       city: 'Москва',
       title: 'Златоглавая столица',
-      image: 'https://cdn.poehali.dev/projects/627bb53e-7cdc-477d-967a-4bf66668311c/files/48aeb251-d9e4-424e-8ef4-503e85dcb98c.jpg',
+      image: 'https://cdn.poehali.dev/projects/627bb53e-7cdc-477d-967a-4bf66668311c/files/1f32b148-d6a3-43c8-903f-762a0aac0ff2.jpg',
       price: '25 000 ₽',
-      duration: '3 дня',
-      description: 'Красная площадь, Кремль, Храм Василия Блаженного'
+      duration: '3 дня / 2 ночи',
+      description: 'Красная площадь, Кремль, Храм Василия Блаженного, Третьяковская галерея'
     },
     {
       id: 2,
       city: 'Санкт-Петербург',
       title: 'Северная столица',
-      image: 'https://cdn.poehali.dev/projects/627bb53e-7cdc-477d-967a-4bf66668311c/files/b92feb41-4caa-4628-8278-35c12563ed80.jpg',
+      image: 'https://cdn.poehali.dev/projects/627bb53e-7cdc-477d-967a-4bf66668311c/files/c0e39746-8ff0-4ff8-8f79-8acaf3b0cc1d.jpg',
       price: '30 000 ₽',
-      duration: '4 дня',
-      description: 'Эрмитаж, Петергоф, Исаакиевский собор'
+      duration: '4 дня / 3 ночи',
+      description: 'Эрмитаж, Петергоф, Исаакиевский собор, Дворцовая площадь'
     },
     {
       id: 3,
       city: 'Байкал',
       title: 'Жемчужина Сибири',
-      image: 'https://cdn.poehali.dev/projects/627bb53e-7cdc-477d-967a-4bf66668311c/files/4d1b0680-165b-4cb3-91b7-ec5884d104b3.jpg',
+      image: 'https://cdn.poehali.dev/projects/627bb53e-7cdc-477d-967a-4bf66668311c/files/d568b49c-ad4c-4fba-9c69-188d308d646b.jpg',
       price: '45 000 ₽',
-      duration: '7 дней',
-      description: 'Самое глубокое озеро мира, природные заповедники'
+      duration: '7 дней / 6 ночей',
+      description: 'Самое глубокое озеро планеты, Листвянка, остров Ольхон, шаман-скала'
     },
     {
       id: 4,
       city: 'Казань',
       title: 'Столица Татарстана',
-      image: 'https://cdn.poehali.dev/projects/627bb53e-7cdc-477d-967a-4bf66668311c/files/48aeb251-d9e4-424e-8ef4-503e85dcb98c.jpg',
+      image: 'https://cdn.poehali.dev/projects/627bb53e-7cdc-477d-967a-4bf66668311c/files/895449b2-9b40-48e8-8e48-02d58d7fb615.jpg',
       price: '20 000 ₽',
-      duration: '2 дня',
-      description: 'Кремль, Мечеть Кул-Шариф, национальная кухня'
+      duration: '2 дня / 1 ночь',
+      description: 'Казанский Кремль, Мечеть Кул-Шариф, Башня Сююмбике, дегустация'
     },
     {
       id: 5,
       city: 'Сочи',
-      title: 'Курорт на море',
-      image: 'https://cdn.poehali.dev/projects/627bb53e-7cdc-477d-967a-4bf66668311c/files/4d1b0680-165b-4cb3-91b7-ec5884d104b3.jpg',
+      title: 'Курорт на Черном море',
+      image: 'https://cdn.poehali.dev/projects/627bb53e-7cdc-477d-967a-4bf66668311c/files/1f32b148-d6a3-43c8-903f-762a0aac0ff2.jpg',
       price: '35 000 ₽',
-      duration: '5 дней',
-      description: 'Олимпийский парк, Красная поляна, пляжи'
+      duration: '5 дней / 4 ночи',
+      description: 'Олимпийский парк, Красная Поляна, Дендрарий, пляжи Черного моря'
     },
     {
       id: 6,
       city: 'Владивосток',
       title: 'Ворота на Восток',
-      image: 'https://cdn.poehali.dev/projects/627bb53e-7cdc-477d-967a-4bf66668311c/files/b92feb41-4caa-4628-8278-35c12563ed80.jpg',
+      image: 'https://cdn.poehali.dev/projects/627bb53e-7cdc-477d-967a-4bf66668311c/files/c0e39746-8ff0-4ff8-8f79-8acaf3b0cc1d.jpg',
       price: '40 000 ₽',
-      duration: '4 дня',
-      description: 'Русский мост, бухта Золотой Рог, морские пейзажи'
+      duration: '4 дня / 3 ночи',
+      description: 'Русский мост, Золотой мост, бухта Золотой Рог, маяк Токаревская кошка'
     }
   ];
 
   const hotTour = {
     city: 'Москва + Санкт-Петербург',
     title: 'Две столицы по супер цене!',
-    image: 'https://cdn.poehali.dev/projects/627bb53e-7cdc-477d-967a-4bf66668311c/files/48aeb251-d9e4-424e-8ef4-503e85dcb98c.jpg',
+    image: 'https://cdn.poehali.dev/projects/627bb53e-7cdc-477d-967a-4bf66668311c/files/1f32b148-d6a3-43c8-903f-762a0aac0ff2.jpg',
     oldPrice: '60 000 ₽',
     newPrice: '42 000 ₽',
-    duration: '7 дней',
+    duration: '7 дней / 6 ночей',
     discount: '30%',
     endDate: '2025-11-01',
-    description: 'Посетите главные достопримечательности двух столиц России! В тур включены: проживание в 4* отелях, трансфер, экскурсии по Кремлю, Эрмитажу, Петергофу. Скидка действует только до конца месяца!'
+    description: 'Уникальная возможность за одну поездку познакомиться с двумя главными городами России! Программа тура включает все ключевые достопримечательности обеих столиц.'
   };
 
   const reviews = [
@@ -271,6 +271,54 @@ const Index = () => {
                 </CardHeader>
                 <CardContent className="p-0 mb-6">
                   <p className="text-gray-600 mb-4">{hotTour.description}</p>
+                  
+                  <div className="bg-blue-50 rounded-lg p-4 mb-4">
+                    <h4 className="font-semibold mb-3 text-gray-900">Программа тура:</h4>
+                    <div className="space-y-2">
+                      <div className="flex gap-2 text-sm">
+                        <span className="font-semibold text-primary min-w-[60px]">День 1-3:</span>
+                        <span className="text-gray-600">Москва - Кремль, Красная площадь, Третьяковская галерея</span>
+                      </div>
+                      <div className="flex gap-2 text-sm">
+                        <span className="font-semibold text-primary min-w-[60px]">День 4:</span>
+                        <span className="text-gray-600">Переезд на скоростном поезде "Сапсан"</span>
+                      </div>
+                      <div className="flex gap-2 text-sm">
+                        <span className="font-semibold text-primary min-w-[60px]">День 5-6:</span>
+                        <span className="text-gray-600">Санкт-Петербург - Эрмитаж, Петергоф, разводные мосты</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-green-50 rounded-lg p-4 mb-4">
+                    <h4 className="font-semibold mb-2 text-gray-900 flex items-center gap-2">
+                      <Icon name="CheckCircle2" size={18} className="text-green-600" />
+                      В стоимость включено:
+                    </h4>
+                    <ul className="space-y-1 text-sm text-gray-600">
+                      <li className="flex items-start gap-2">
+                        <span className="text-green-600 mt-0.5">✓</span>
+                        <span>Проживание в отелях 4* в центре городов</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-green-600 mt-0.5">✓</span>
+                        <span>Завтраки в отелях</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-green-600 mt-0.5">✓</span>
+                        <span>Билеты на поезд "Сапсан" Москва-Петербург</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-green-600 mt-0.5">✓</span>
+                        <span>Все экскурсии с профессиональным гидом</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-green-600 mt-0.5">✓</span>
+                        <span>Входные билеты в музеи</span>
+                      </li>
+                    </ul>
+                  </div>
+
                   <div className="flex items-center gap-2 text-gray-600 mb-4">
                     <Icon name="Clock" size={20} />
                     <span>{hotTour.duration}</span>
