@@ -68,15 +68,54 @@ const Index = () => {
   ];
 
   const hotTour = {
-    city: 'Москва + Санкт-Петербург',
-    title: 'Две столицы по супер цене!',
+    city: 'Сергиев Посад - Переславль - Ростов - Ярославль - Кострома - Иваново - Суздаль - Владимир',
+    title: 'Золотое кольцо России',
     image: 'https://cdn.poehali.dev/projects/627bb53e-7cdc-477d-967a-4bf66668311c/files/1f32b148-d6a3-43c8-903f-762a0aac0ff2.jpg',
-    oldPrice: '60 000 ₽',
-    newPrice: '42 000 ₽',
-    duration: '7 дней / 6 ночей',
+    oldPrice: '55 000 ₽',
+    newPrice: '38 500 ₽',
+    duration: '5 дней / 4 ночи',
     discount: '30%',
     endDate: '2025-11-01',
-    description: 'Уникальная возможность за одну поездку познакомиться с двумя главными городами России! Программа тура включает все ключевые достопримечательности обеих столиц.'
+    description: 'Погружение в историю древней Руси! Посетите легендарные города Золотого кольца с их уникальными храмами, монастырями и традициями.',
+    program: [
+      {
+        day: 1,
+        title: 'Сергиев Посад - Переславль-Залесский',
+        items: [
+          'Переезд в Сергиев Посад. Экскурсия по Троице-Сергиевой Лавре. Отъезд в Переславль-Залесский.',
+          'Экскурсия по Переславлю, с посещением одного из монастырей, Плещеево озеро, Ботик Петра I. Отправление в Ростов Великий.'
+        ]
+      },
+      {
+        day: 2,
+        title: 'Ростов Великий - Ярославль - Кострома',
+        items: [
+          'Обед. Экскурсия по Ростову Великому. Размещение в гостинице г. Кострома.',
+          'Завтрак. Отправление в Ярославль. Возвращение в Кострому. Обед в ресторане гостиницы. Экскурсия по Костроме.'
+        ]
+      },
+      {
+        day: 3,
+        title: 'Иваново - Владимир',
+        items: [
+          'Завтрак. Отправление в Суздаль. Путевая обзорная экскурсия в г. Иваново. Размещение в г. Владимир. Ужин в ресторане гостиницы.'
+        ]
+      },
+      {
+        day: 4,
+        title: 'Суздаль - Владимир',
+        items: [
+          'Завтрак. Отъезд в Муром. Экскурсия. Обед. Ужин в ресторане гостиницы.'
+        ]
+      },
+      {
+        day: 5,
+        title: 'Дивеево - Возвращение',
+        items: [
+          'Завтрак. Переезд в Дивеево. Возвращение'
+        ]
+      }
+    ]
   };
 
   const reviews = [
@@ -253,86 +292,62 @@ const Index = () => {
             <p className="text-gray-600 text-lg">Успейте забронировать со скидкой до конца месяца!</p>
           </div>
 
-          <Card className="max-w-4xl mx-auto overflow-hidden shadow-2xl">
-            <div className="grid md:grid-cols-2">
-              <div className="relative h-64 md:h-auto">
+          <Card className="max-w-5xl mx-auto overflow-hidden shadow-2xl">
+            <div className="relative">
+              <div className="relative h-48 md:h-64">
                 <img src={hotTour.image} alt={hotTour.title} className="w-full h-full object-cover" />
                 <Badge className="absolute top-4 left-4 bg-destructive text-white text-lg px-4 py-2">
                   -{hotTour.discount}
                 </Badge>
               </div>
+              
               <div className="p-8">
-                <CardHeader className="p-0 mb-4">
+                <div className="mb-6">
                   <div className="flex items-center gap-2 text-gray-600 mb-2">
                     <Icon name="MapPin" size={20} />
-                    <span>{hotTour.city}</span>
+                    <span className="text-sm">{hotTour.city}</span>
                   </div>
-                  <CardTitle className="text-3xl mb-4">{hotTour.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="p-0 mb-6">
+                  <h3 className="text-3xl font-bold mb-3">{hotTour.title}</h3>
                   <p className="text-gray-600 mb-4">{hotTour.description}</p>
                   
-                  <div className="bg-blue-50 rounded-lg p-4 mb-4">
-                    <h4 className="font-semibold mb-3 text-gray-900">Программа тура:</h4>
-                    <div className="space-y-2">
-                      <div className="flex gap-2 text-sm">
-                        <span className="font-semibold text-primary min-w-[60px]">День 1-3:</span>
-                        <span className="text-gray-600">Москва - Кремль, Красная площадь, Третьяковская галерея</span>
-                      </div>
-                      <div className="flex gap-2 text-sm">
-                        <span className="font-semibold text-primary min-w-[60px]">День 4:</span>
-                        <span className="text-gray-600">Переезд на скоростном поезде "Сапсан"</span>
-                      </div>
-                      <div className="flex gap-2 text-sm">
-                        <span className="font-semibold text-primary min-w-[60px]">День 5-6:</span>
-                        <span className="text-gray-600">Санкт-Петербург - Эрмитаж, Петергоф, разводные мосты</span>
-                      </div>
+                  <div className="flex flex-wrap gap-4 mb-6">
+                    <div className="flex items-center gap-2 text-gray-600">
+                      <Icon name="Clock" size={20} />
+                      <span>{hotTour.duration}</span>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <span className="text-3xl font-bold text-destructive">{hotTour.newPrice}</span>
+                      <span className="text-xl text-gray-400 line-through">{hotTour.oldPrice}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-gray-500">
+                      <Icon name="Calendar" size={16} />
+                      <span>Акция до {new Date(hotTour.endDate).toLocaleDateString('ru-RU')}</span>
                     </div>
                   </div>
+                </div>
 
-                  <div className="bg-green-50 rounded-lg p-4 mb-4">
-                    <h4 className="font-semibold mb-2 text-gray-900 flex items-center gap-2">
-                      <Icon name="CheckCircle2" size={18} className="text-green-600" />
-                      В стоимость включено:
-                    </h4>
-                    <ul className="space-y-1 text-sm text-gray-600">
-                      <li className="flex items-start gap-2">
-                        <span className="text-green-600 mt-0.5">✓</span>
-                        <span>Проживание в отелях 4* в центре городов</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-green-600 mt-0.5">✓</span>
-                        <span>Завтраки в отелях</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-green-600 mt-0.5">✓</span>
-                        <span>Билеты на поезд "Сапсан" Москва-Петербург</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-green-600 mt-0.5">✓</span>
-                        <span>Все экскурсии с профессиональным гидом</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-green-600 mt-0.5">✓</span>
-                        <span>Входные билеты в музеи</span>
-                      </li>
-                    </ul>
+                <div className="border-t pt-6">
+                  <h4 className="text-xl font-bold mb-4">Программа тура ({hotTour.duration})</h4>
+                  <div className="space-y-6">
+                    {hotTour.program.map((day) => (
+                      <div key={day.day} className="border-l-4 border-primary pl-4">
+                        <h5 className="font-semibold text-lg text-primary mb-2">
+                          День {day.day}: {day.title}
+                        </h5>
+                        <ul className="space-y-2">
+                          {day.items.map((item, idx) => (
+                            <li key={idx} className="flex gap-2 text-sm text-gray-700">
+                              <span className="text-primary mt-1">•</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
                   </div>
+                </div>
 
-                  <div className="flex items-center gap-2 text-gray-600 mb-4">
-                    <Icon name="Clock" size={20} />
-                    <span>{hotTour.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="text-3xl font-bold text-destructive">{hotTour.newPrice}</span>
-                    <span className="text-xl text-gray-400 line-through">{hotTour.oldPrice}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-500">
-                    <Icon name="Calendar" size={16} />
-                    <span>Акция до {new Date(hotTour.endDate).toLocaleDateString('ru-RU')}</span>
-                  </div>
-                </CardContent>
-                <Button size="lg" className="w-full bg-destructive hover:bg-destructive/90">
+                <Button size="lg" className="w-full mt-8 bg-destructive hover:bg-destructive/90">
                   <Icon name="Ticket" size={20} className="mr-2" />
                   Забронировать сейчас
                 </Button>
